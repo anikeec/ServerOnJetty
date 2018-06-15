@@ -24,7 +24,7 @@ public class JettyServer {
 
     void start() throws Exception {
 
-        int serverPort = 8080;
+        int serverPort = 8082;
         int maxThreads = 100;
         int minThreads = 10;
         int idleTimeout = 120;

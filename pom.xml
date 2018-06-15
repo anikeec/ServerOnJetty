@@ -43,7 +43,7 @@
               <execution><goals><goal>java</goal></goals></execution>
             </executions>
             <configuration>
-              <mainClass>com.apu.serveronjetty.HelloWorld</mainClass>
+              <mainClass>com.apu.serveronjetty.Main</mainClass>
             </configuration>
           </plugin>
         </plugins>
