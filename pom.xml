@@ -48,7 +48,7 @@
 		      <configuration>
 		        <archive>
 		          <manifest>
-		            <mainClass>com.apu.ServerOnJetty.JettyServer</mainClass>
+		            <mainClass>com.apu.serveronjetty.JettyServer</mainClass>
 		          </manifest>
 		        </archive>
 		        <descriptorRefs>
