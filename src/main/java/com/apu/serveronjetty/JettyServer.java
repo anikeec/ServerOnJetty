@@ -21,8 +21,9 @@ import org.eclipse.jetty.util.thread.QueuedThreadPool;
  */
 public class JettyServer {
     private Server server;
+    private boolean started = false;
 
-    void start() throws Exception {
+    public void start() throws Exception {
 
         int serverPort = 8082;
         int maxThreads = 100;
@@ -51,14 +52,23 @@ public class JettyServer {
         server.setHandler(handlers);        
 
         server.start();
+        this.setStarted(true);
         server.join();
     }
 
-    void stop() throws Exception {
+    public void stop() throws Exception {
         server.stop();
     }
     
-    public static void main(String[] args) throws Exception {
+    public synchronized boolean isStarted() {
+		return started;
+	}
+
+	public synchronized void setStarted(boolean started) {
+		this.started = started;
+	}
+
+	public static void main(String[] args) throws Exception {
         new JettyServer().start();
     }
 }
